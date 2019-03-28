@@ -6,8 +6,9 @@
 	<!-- font-family: 'Oswald', sans-serif;
 font-family: 'Roboto', sans-serif;
 font-family: 'Noto Sans KR', sans-serif; -->
-	<!-- <link rel="stylesheet" type="text/css" href="css/fullpage.min.css" /> -->
 	<link rel="stylesheet" href="css/layout.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
 </head>
 <body>
 <div id="fullpage">
@@ -64,7 +65,7 @@ font-family: 'Noto Sans KR', sans-serif; -->
 			</div>
 		</div>
 	</div>
-	<div class="section" id="section2_2">
+	<div class="section" id="section2">
 		<div class="center">
 			<h1>WHY STRADVISION?</h1>
 			<div class="content">
@@ -97,54 +98,76 @@ font-family: 'Noto Sans KR', sans-serif; -->
 			</div>
 		</div>
 	</div>
-	<div class="section" id="section2_2_1">
+	<div class="section" id="section2_1">
 		<div class="center">
-			<h1>lighter</h1>
+			<h1>Safer</h1>
+			<p>SV Net is highly specialized in processing, understanding, and predicting difficult weather conditions, without straining HW</p>
+			<!-- 동영상 4개 링크 -->
+			<div class="content">
+					<video autoplay muted loop id="video">
+						<source src="img/[StradVision]SVNet_1.0_PC_01_Snow.mp4" type="video/mp4">
+					</video>
+			</div>
+			<div class="content">
+					<video autoplay muted loop id="video">
+						<source src="img/[StradVision]SVNet_1.0_PC_01_Rain.mp4" type="video/mp4">
+					</video>
+			</div>
+			<div class="content">
+					<video autoplay muted loop id="video">
+						<source src="img/[StradVision]SVNet_1.0_PC_01_Fog.mp4" type="video/mp4">
+					</video>
+			</div>
+			<div class="content">
+				<video autoplay muted loop id="video">
+					<source src="img/[StradVision]SVNet_1.0_PC_01_Night.mp4" type="video/mp4">
+				</video>
+			</div>
 		</div>
 	</div>
-	<div class="section" id="section2_2_2">
+	<div class="section" id="section2_2">
 		<div class="center">
-			<h1>Highest Compatibility Towards Mass Technological Diffusion</h1>
+			<h1>Lighter</h1>
+			<p>SVNet is able to perform effective processing in real-time even on low-specification chipsets and to detect objects using deep learning.</p>
+			<table>
+			  <tr>
+			    <td width="300">&nbsp;</td>
+			    <td width="370"><p>Example</p></td>
+			    <td width="370">Details</td>
+		      </tr>
+			  <tr>
+			    <td>Physical Chipset</td>
+			    <td rowspan="4">
+		        <p dir="ltr">Nvidia Jetson</p>
+		        <p dir="ltr">TX2 Module</p>
+			    </td>
+			    <td>
+		        <p dir="ltr">2&quot; x 3.5&quot;</p>
+			      <p dir="ltr">(50 mm x 87 mm)</p>
+			    </td>
+		      </tr>
+			  <tr>
+			    <td>Weight</td>
+			    <td>
+			      <p dir="ltr">85 g (3 oz)</p>
+			    </td>
+		      </tr>
+			  <tr>
+			    <td>Memory req. to run SV Net</td>
+			    <td>~ X mb</td>
+		      </tr>
+			  <tr>
+			    <td>Electricity req. to run SV Net</td>
+			    <td>~ 7.5 watts</td>
+				</tr>
+		  </table>
+		</div>
+	</div>
+	<div class="section" id="section2_3">
+		<div class="center">
+			<h1>Flexible</h1>
 			<p>Aggressive platform expansion - one every 3-6 months</p>
 			<p>SV Net’s Platform Expansion History:</p>
-		</div>
-	</div>	
-	<!-- <div class="section" id="section2">
-		<div class="center">
-			<h1>PERCEPTION SW PRODUCTS</h1>
-			<p>Combined with cameras and embedded platforms, SVNet provides with visual intelligence to conventional / autonomous vehicles</p>
-			<div class="source"></div>
-			<div class="content"></div>
-		</div>
-	</div>
-	<div class="section" id="section2">
-		<div class="center">
-			<h1>PERCEPTION SW PRODUCTS</h1>
-			<p>Combined with cameras and embedded platforms, SVNet provides with visual intelligence to conventional / autonomous vehicles</p>
-			<div class="source"></div>
-			<div class="content"></div>
-		</div>
-	</div>
-	<div class="section" id="section2">
-		<div class="center">
-			<h1>PERCEPTION SW PRODUCTS</h1>
-			<p>Combined with cameras and embedded platforms, SVNet provides with visual intelligence to conventional / autonomous vehicles</p>
-			<div class="source"></div>
-			<div class="content"></div>
-		</div>
-	</div>
-	<div class="section" id="section3">
-		<div class="center">
-			<h1>DOWN TO THE EARTH</h1>
-			<p>Built track-records in transition of state-of-the-art technology in labs to products for commercial use</p>
-			<h2>Goal-oriented Quick Execution</h2>
-			<p class="content_font">Constantly implementing DNN based object detection on embedded platforms 
-				within short periods (3~6 months)
-			</p>			
-			<h2>Pragmatic innovator – 20+ patents issued, 130+ in progress</h2>
-			<p class="content_font">Patents about application of deep neural networks: efficient implement, training, faster inference, data engineering, and optimization<br>
-Demonstrated the key idea of the IP via intensive experiments and optimization results
-			</p>
 			<div class="timeline">
 				<img src="img/timeline.png" alt="타임라인">
 				<p class="achieve time01">Q3,16<br>SVNet @ TX1/TX2</p>
@@ -154,13 +177,109 @@ Demonstrated the key idea of the IP via intensive experiments and optimization r
 				<p class="achieve time05"><img src="img/gold.png" alt="금메달"><br>Q2’18<br>SVNet @ R-car <br>V3M /Xilinx ZCU-102</p>
 				<p class="achieve time06"><img src="img/gold.png" alt="금메달"><br>Q3’18<br>SVNet @ R-car <br>V3H/Qualcomm SDM845</p>
 				<p class="achieve time07">Q4’18<br>SVNet @ Samsung Exynos8 (WIP)</p>
-				<input type="text" placeholder="WHAT'S NEXT?" class="achieve time08">
+				<!-- <input type="text" placeholder="WHAT'S NEXT?" class="achieve time08"> -->
 				<p class="achieve time09"><img src="img/gold.png" alt="금메달">
 					1st In the World</p>
-			</div>	
+			</div>
 		</div>
 	</div>
-	<div class="section" id="section3_2">
+	<div class="section" id="section2_4">
+		<div class="center">
+			<h1>Affordable</h1>
+			<p>Since the engine does not require higher specification for chipsets, users can introduce it into autos which they already own without replacing hardware.</p>
+			<table>
+			  <tr>
+			    <td width="300">
+			      <div >Models</div></td>
+			    <td width="370">
+			      <p >Chipsets Used</p></td>
+			    <td width="370">
+			      <div >Status</div></td>
+		      </tr>
+			  <tr>
+			    <td>
+			      <div>Chrysler Escalade (2016)</div></td>
+			    <td>
+			      <div>i.e. &ldquo;Renesas V3H&rdquo;</div>
+	      	</td>
+			    <td rowspan="4">
+		          <p  dir="ltr">Immediately</p>
+		          <div ><br />
+	              </div>
+		          <p  dir="ltr">Deployable</p>
+		          <div ><br>
+	              </div></td>
+		      </tr>
+			  <tr>
+			    <td>
+			      <div >BMW C Class (2017)</div></td>
+			    <td>
+			      <div >i.e. &ldquo;NXP S32V234&rdquo;</div></td>
+		      </tr>
+			  <tr>
+			    <td>
+			      <p dir="ltr">Hyundai Sonata (2018)</p></td>
+			    <td>
+			      <div >i.e. &ldquo;TI TDA2X&rdquo;</div></td>
+		      </tr>
+			  <tr>
+			    <td>
+			      <div >Toyota Corolla (2019)</div></td>
+			    <td>
+			      <div >i.e. &ldquo;Xilinx ZCU102&rdquo;</div></td>
+			    </tr>
+		  </table>
+		</div>
+	</div>
+
+	<div class="section" id="section3">
+		<div class="center">
+			<h1>Product1 <span>- SV Net - Exterior Camera</span></h1>
+			<div class="source">
+				<iframe width=100% height=100% src="https://www.youtube.com/embed/-q5xKWF-LBM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div class="content">
+				<ul class="text">
+					<li>Object Detection</li>
+					<li>Free Space detection</li>
+					<li>Blind spot detection</li>
+					<li>Traffic sign recognition</li>
+					<li>Lane attributes</li>
+					<li>Pedestrian & two wheel attributes</li>
+					<li>Text recognition (world best)</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section3">
+		<div class="center">
+			<h1>Product2 <span>- SV Net - Interior Camera</span></h1>
+			<div class="source">
+				<img src="img/interior_camera.png" alt="내부카메라">
+			</div>
+			<div class="content">
+				<p class="text">Passenger Occupancy Detection is possible through an infrared camera and ARM (WIP) hardware. This technology understands the difference between human passengers and other objects in the passenger seat.</p>
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section3">
+		<div class="center">
+			<h1>Product3 <span>- SV Net - Tools</span></h1>
+			<div class="source">
+				<img src="img/tools.png" alt="tool">
+			</div>
+			<div class="content">
+				<ul class="text">
+					<li>Semi-auto labeling</li>
+					<li>Training suite</li>
+					<li>Optimization Suite</li>
+					<li>GPU & CPU: PC & Cloud</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- develop 부분 -->
+	<div class="section" id="section6">
 		<div class="center">
 			<h1>Spearheading the Autopilot Industry</h1>
 			<p>IP Powerhouse - 150+ patents ready and pending</p>
@@ -174,6 +293,8 @@ Demonstrated the key idea of the IP via intensive experiments and optimization r
 			</div>
 		</div>
 	</div>
+	<!--
+
 	<div class="section" id="section4">
 	    <div class="slide" id="slide1">
 			<div class="center">
@@ -219,7 +340,7 @@ Demonstrated the key idea of the IP via intensive experiments and optimization r
 			</div>
 		</div>
 	</div>-->
-	<div class="section" id="section6">
+	<div class="section" id="section7">
 		<div class="center">
 			<h1>ALLIES</h1>
 			<div class="content">
@@ -246,7 +367,7 @@ Demonstrated the key idea of the IP via intensive experiments and optimization r
 			</div>
 		</div>
 	</div>
-	<div class="section" id="section7">
+	<div class="section" id="section8">
 		<div class="center">
 			<h1>LEADERSHIP</h1>
 			<div>
@@ -279,7 +400,7 @@ Demonstrated the key idea of the IP via intensive experiments and optimization r
 			</div>
 		</div>
 	</div>
-	<div class="section" id="section8">
+	<div class="section" id="section9">
 		<div class="center">
 			<h1>GLOBAL OPERATION</h1>
 			<div class="content">				
@@ -311,7 +432,7 @@ Demonstrated the key idea of the IP via intensive experiments and optimization r
 			</div>
 		</div>
 	</div>
-	<div class="section" id="section9">
+	<div class="section" id="section10">
 		<div class="center">
 			<div class="content">
 				<h1>ANY QUESTIONS?</h1>
@@ -338,5 +459,6 @@ Demonstrated the key idea of the IP via intensive experiments and optimization r
 	//   }
 	// }
 	</script>
+	<script src="js/animation.js"></script>
 </body>
 </html>
