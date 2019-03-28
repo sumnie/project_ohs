@@ -1,0 +1,449 @@
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+        font-family: 'Oswald', sans-serif;
+		color: #333;
+		margin:0;
+        padding:0;
+        margin-bottom: 10px;
+    }
+    p{
+        font-size: 1.5em;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 0.05em;
+    }
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+        font-family: 'Roboto', sans-serif;
+		text-align:justify;
+        overflow: hidden;
+	}
+
+	#myVideo{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		top:0;
+		right:0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% 100%;
+ 		background-color: black; /* in case the video doesn't fit the whole page*/
+  		background-image: /* our video */;
+  		background-position: center center;
+  		background-size: contain;
+   		object-fit: cover; /*cover video background */
+   		z-index:3;
+	}
+
+	/* Layer with position absolute in order to have it over the video
+	* --------------------------------------- */
+	#section0 .layer{
+		position: absolute;
+		z-index: 4;
+		width: 100%;
+		left: 0;
+        top: 38%;
+        font-size: 1.5em;
+        text-align: center;
+		/*
+		* Preventing flicker on some browsers
+		* See http://stackoverflow.com/a/36671466/1081396  or issue #183
+		*/
+		/* -webkit-transform: translate3d(0,0,0);
+		-ms-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0); */
+	}
+
+	/*solves problem with overflowing video in Mac with Chrome */
+	#section0{
+		overflow: hidden;
+	}
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+
+
+	/* Hiding video controls
+	* See: https://css-tricks.com/custom-controls-in-html5-video-full-screen/
+	* --------------------------------------- */
+	video::-webkit-media-controls {
+	  display:none !important;
+    }
+    
+*{
+    margin: 0; padding: 0;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul,li,ol{
+    list-style: none;
+}
+.center{
+    width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    /* 임시 background, z-index */
+    /* background-color: rgba(255, 255, 255, 0.329); */
+    z-index:999;
+    /* 임시 */
+    position: relative;
+    padding-top: 8%;
+    box-sizing: border-box;
+}
+
+/*************************************** sec0 - title ************************************************/
+#section0 h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.05em;
+    color: #fff;
+    font-size: 6em;
+    text-shadow: 0 0 30px #333;
+}
+#section0 .box{
+    letter-spacing: 0.1em;
+    width: 700px;
+    text-align: center;
+    padding: 13px;
+    background: rgb(163, 218, 255);
+    color: #000;
+    font-size: 1.3em;
+    font-weight: 700;
+    margin: 0 auto;
+}
+
+/* sec1 */
+#section1 .box{
+    padding-top: 50px;
+    float: left;
+    width: 350px;
+    height: 650px;
+    margin-right: 50px;
+}
+
+#section1 .box .thumbnail{
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+}
+#section1 .box .thumbnail img{
+    height: 100%;
+}
+#section1 .box:nth-of-type(2) .thumbnail{
+    background-image: url(../img/sensor.jpg);
+    background-size: cover;
+    background-position: 70%;
+}
+#section1 .box .text{
+    text-align: left;
+    padding: 30px 0;
+    box-sizing: border-box;
+    font-size: 1.2em;
+}
+#section1 .box .text>p{
+    margin-bottom: 30px;
+    height: 68px;
+}
+#section1 .box h2{
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2em;
+}
+#section1 li{
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+#section1 li:before{
+    content: "―";
+    margin-right: 0.5em;
+}
+/* sec2 */
+#section2 .source{
+    position: absolute;
+    width: 800px;
+    height: 500px;
+    background: olivedrab;
+}
+#section2 .content{
+    position: absolute;
+    width: 800px;
+    height: 500px;
+    background: #333;
+    top: 40%;
+    right: 0;
+}
+/* sec2_2 */
+#section2_2 .content{
+    width: 33%;
+    float: left;
+    text-align: center;
+}
+#section2_2 .content img{
+    width: 80%;
+}
+/* sec3 */
+#section3{
+    background-color: #8fbcdb;
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+    color: #fff;
+}
+#section3 h1{
+    color: #fff;
+}
+#section3 p{
+    color: #333;
+}
+#section3 h2{
+    /* color: #a2e6ff; */
+    font-style: italic;
+    margin-bottom: 15px;
+}
+#section3 .content_font{
+    font-size: 1.3em;
+}
+#section3 .timeline{
+    position: relative;
+    bottom: -50px;
+    left: -50px;
+}
+#section3 .timeline .achieve{
+    position: absolute;
+    font-size: 1em;
+    color: #333;
+    font-weight: 600;
+}
+#section3 .achieve img{
+    height: 30px;
+    position: absolute;
+    left: -35px;
+    top: 20px;
+}
+#section3 .timeline .time01{
+    bottom: -70px;
+    left: 160px;
+}
+#section3 .timeline .time02{
+    bottom: -80px;
+    left: 400px;
+}
+#section3 .timeline .time03{
+    bottom: -150px;
+    left: 520px;
+}
+#section3 .timeline .time04{
+    top: -40px;
+    left: 600px;
+}
+#section3 .timeline .time05{
+    top: -40px;
+    left: 850px;
+}
+#section3 .timeline .time06{
+    bottom: -80px;
+    left: 950px;
+}
+#section3 .timeline .time07{
+    bottom: -150px;
+    left: 1050px;
+    text-align: left;
+}
+#section3 .timeline .time08{
+    height: 50px;
+    bottom: -200px;
+    left: 1100px;
+    text-align: center;
+    background:#fff;
+}
+/* 상자 크기 input태그 자동늘리기 http://vnthf.logdown.com/posts/2016/05/18/front-input-box */
+#section3 .timeline .time09{
+    top: -80px;
+    right: 0px;
+}
+#section3 .timeline .time09 img{
+    height: 50px;
+    position: static;
+    vertical-align: -20px;
+    margin-right: -10px;
+}
+
+/* sec4 */
+#section4 h1{
+    text-align: center;
+    margin-bottom: 40px;
+}
+#section4 .center>p{
+    text-align: center
+}
+#section4 ul{
+    font-size: 1.5em;
+    padding-top: 50px;
+    padding-left: 100px;
+}
+#section4 h2{
+    font-size: 3.0em;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+#section4 .content{
+    margin-top: 100px;
+    width: 50%;
+    float: left;
+}
+#section4 #slide2 h2{
+    background: #0f87da;
+    padding: 0.1em;
+    color: #fff;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+#section4 #slide1 ul>li:first-of-type{margin-bottom: 15px;}
+#section4 .contentWrap>h1{
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%,-50%);
+    color: #8fbcdb;
+}
+#section4 .contentWrap>h2{
+    margin-bottom: 30px;
+}
+/**************************************** sec6 allies logo **************************************/
+#section6 .content img{
+    max-height: 50px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    display: block;
+    margin: 25px auto 0;
+}
+#section6 h1{
+    margin-bottom: 40px;
+    text-align: center;
+    color: #333;
+}
+#section6 .content>h2{
+    font-size: 3em;
+    margin-bottom: 50px;
+}
+#section6 .content{
+    text-align: center;
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+}
+
+/***************************************** sec7 leadership ***********************************************/
+#section7 h1{
+    text-align: center;
+}
+#section7 h2{
+    margin-bottom: 20px;
+}
+#section7 .center>div{
+    font-size: 1.3em;
+    float: left;
+    width: 33%;
+    height: 800px;
+    text-align: center;
+    padding: 50px;
+    box-sizing: border-box;
+}
+#section7 img{
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+#section7 li{
+    text-align: left;
+    list-style: square;
+    padding: 0.4em;
+}
+/****************************************** sec8 Global OPERATION*****************************************/
+#section8 .center{
+    background-image: url(../img/globalmap.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+#section8 h1{
+    text-align: center;
+}
+#section8 .content{padding-top: 30px; box-sizing: border-box;}
+#section8 .content div{
+    position: absolute;
+    width: 300px;
+    height: 264px;
+    text-align:center;
+}
+#section8 .content p{
+    font-size: 1.6em;
+}
+#section8 .content img{
+    height: 150px;
+}
+#section8 .content div:nth-of-type(1){
+    left: 5%;
+}
+#section8 .content div:nth-of-type(2){
+    top: 55%; transform: translateY(-50%);
+}
+#section8 .content div:nth-of-type(3){
+    top: 75%; transform: translateY(-50%);
+    left: 5%;
+}
+#section8 .content div:nth-of-type(4){
+    right: 5%;
+}
+#section8 .content div:nth-of-type(5){
+    right: 0;
+    top: 55%; transform: translateY(-50%);
+}
+#section8 .content div:nth-of-type(6){
+    right: 5%;
+    top: 75%; transform: translateY(-50%);
+}
+
+/******************************** sec9 **********************************************/
+#section9{
+    background-image: url(../img/footerBG.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#section9 .center{
+    padding-top:15vh;
+}
+#section9 .content{
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 80%;
+    height:700px; 
+    margin:0 auto;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 15%;
+}
+#section9 .content h1{
+    margin-bottom: 150px;
+    letter-spacing: 0.1em;
+}
+#section9 .content p{
+    font-size: 3em;
+}
+
+#section9 #footer{
+    position: absolute;
+    width: 100%;
+    bottom: 8%;
+}
+#section9 #footer address{
+    font-style: normal;
+}
