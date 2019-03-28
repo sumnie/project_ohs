@@ -17,6 +17,7 @@
 	/* Centered texts in each section
 	* --------------------------------------- */
 	.section{
+        height: 100vh;
         font-family: 'Roboto', sans-serif;
 		text-align:justify;
         overflow: hidden;
@@ -26,17 +27,16 @@
 		position: absolute;
 		right: 0;
 		bottom: 0;
-		top:0;
-		right:0;
-		width: 100%;
+        min-width: 100%; 
+        min-height: 100%;
+        background-position: center center;
+        background-size: contain;
+/*		width: 100%;
 		height: 100%;
 		background-size: 100% 100%;
- 		background-color: black; /* in case the video doesn't fit the whole page*/
-  		background-image: /* our video */;
-  		background-position: center center;
-  		background-size: contain;
-   		object-fit: cover; /*cover video background */
-   		z-index:3;
+ 		background-color: black;
+   		object-fit: cover;
+   		z-index:3;*/
 	}
 
 	/* Layer with position absolute in order to have it over the video
@@ -127,7 +127,7 @@ ul,li,ol{
     float: left;
     width: 350px;
     height: auto;
-    margin-right: 50px;
+    padding: 2vh;
 }
 
 #section1 .box .thumbnail{
@@ -185,7 +185,7 @@ ul,li,ol{
 }
 /* sec2_2 */
 #section2_2 .content{
-    width: 33%;
+    width: 25%;
     float: left;
     text-align: center;
 }
@@ -323,8 +323,6 @@ ul,li,ol{
 /**************************************** sec6 allies logo **************************************/
 #section6 .content img{
     max-height: 50px;
-    margin-right: 25px;
-    margin-bottom: 25px;
     display: block;
     margin: 25px auto 0;
 }
@@ -357,7 +355,7 @@ ul,li,ol{
     width: 33%;
     height: 800px;
     text-align: center;
-    padding: 50px;
+    padding: 5vh;
     box-sizing: border-box;
 }
 #section7 img{
@@ -380,15 +378,16 @@ ul,li,ol{
 #section8 h1{
     text-align: center;
 }
-#section8 .content{padding-top: 30px; box-sizing: border-box;}
+/* #section8 .content{padding-top: 30px; box-sizing: border-box;} */
 #section8 .content div{
     position: absolute;
     width: 300px;
-    height: 264px;
+    height: 20vh;
     text-align:center;
 }
 #section8 .content p{
-    font-size: 1.6em;
+    font-size: 1.3em;
+    margin-top: -3vh;
 }
 #section8 .content img{
     height: 150px;
@@ -397,7 +396,7 @@ ul,li,ol{
     left: 5%;
 }
 #section8 .content div:nth-of-type(2){
-    top: 55%; transform: translateY(-50%);
+    top: 53%; transform: translateY(-50%);
 }
 #section8 .content div:nth-of-type(3){
     top: 75%; transform: translateY(-50%);
@@ -408,7 +407,7 @@ ul,li,ol{
 }
 #section8 .content div:nth-of-type(5){
     right: 0;
-    top: 55%; transform: translateY(-50%);
+    top: 53%; transform: translateY(-50%);
 }
 #section8 .content div:nth-of-type(6){
     right: 5%;
@@ -426,19 +425,19 @@ ul,li,ol{
 }
 #section9 .content{
     background-color: rgba(255, 255, 255, 0.5);
-    width: 80%;
-    height:700px; 
+    width: 70%;
+    height:60vh; 
     margin:0 auto;
     text-align: center;
+    padding-top: 17vh;
     box-sizing: border-box;
-    padding-top: 15%;
 }
 #section9 .content h1{
-    margin-bottom: 150px;
+    margin-bottom: 5vh;
     letter-spacing: 0.1em;
 }
 #section9 .content p{
-    font-size: 3em;
+    font-size: 2em;
 }
 
 #section9 #footer{

@@ -6,13 +6,13 @@
 	<!-- font-family: 'Oswald', sans-serif;
 font-family: 'Roboto', sans-serif;
 font-family: 'Noto Sans KR', sans-serif; -->
-	<link rel="stylesheet" type="text/css" href="css/fullpage.min.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="css/fullpage.min.css" /> -->
 	<link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
 <div id="fullpage">
 	<div class="section" id="section0">
-		<video id="myVideo" loop muted data-autoplay>
+		<video autoplay muted loop id="myVideo">
 			<source src="img/Driving-a-Mercedes.mp4" type="video/mp4">
 		</video>
 		<div class="center">
@@ -67,6 +67,13 @@ font-family: 'Noto Sans KR', sans-serif; -->
 	<div class="section" id="section2_2">
 		<div class="center">
 			<h1>WHY STRADVISION?</h1>
+			<div class="content">
+				<h2>Safer</h2>
+				<p>Smart SW relying less on on heavy HW = robust environmental management</p>
+				<h2>Snow, Rain, and Fog Management</h2>
+				<p>vs.</p>
+				<img src="img/lighter00.png" alt="logo">
+			</div>
 			<div class="content">
 				<h2>lighter</h2>
 				<p>Fundamentally lean SW with maximum HW compatibility</p>
@@ -152,7 +159,7 @@ Demonstrated the key idea of the IP via intensive experiments and optimization r
 					1st In the World</p>
 			</div>	
 		</div>
-	</div>-->
+	</div>
 	<div class="section" id="section3_2">
 		<div class="center">
 			<h1>Spearheading the Autopilot Industry</h1>
@@ -211,7 +218,7 @@ Demonstrated the key idea of the IP via intensive experiments and optimization r
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 	<div class="section" id="section6">
 		<div class="center">
 			<h1>ALLIES</h1>
@@ -318,13 +325,18 @@ Demonstrated the key idea of the IP via intensive experiments and optimization r
 		</div>
 	</div>
 </div>
-<script type="text/javascript" src="js/fullpage.min.js"></script>
-<script type="text/javascript">
-    var myFullpage = new fullpage('#fullpage', {
-        verticalCentered: true,
-        // sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE']
-    });
-</script>
-
+<script>
+	// Get the video
+	var video = document.getElementById("myVideo");	
+	// function myFunction() {
+	//   if (video.paused) {
+	// 	video.play();
+	// 	btn.innerHTML = "Pause";
+	//   } else {
+	// 	video.pause();
+	// 	btn.innerHTML = "Play";
+	//   }
+	// }
+	</script>
 </body>
 </html>
